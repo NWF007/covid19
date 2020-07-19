@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+}
+
+.log{
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar{
+    width: 100%;
+    background-color: #A4B0BD;
+}
+
+.table {
+    width: 100%;
+    background-color: #99AAAB;
+}
+
+.mat-cell{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+.mat-header-cell{
+    text-align: center;
+    margin: 1px;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 15px 0;
+}
+
+.mat-column-country {
+    width: 20%;
+}
+
+.mat-column-cases {
+    width: 10%;
+}
+
+.mat-column-todayCases {
+    width: 10%;
+}
+
+.mat-column-deaths {
+    width: 10%;
+}
+
+.mat-column-todayDeaths {
+    width: 10%;
+}
+
+.mat-column-recovered {
+    width: 10%;
+}
+
+.mat-column-todayRecovered {
+    width: 10%;
+}
+
+.mat-column-active {
+    width: 10%;
+}
+
+.mat-column-critical {
+    width: 10%;
+}
+
+.mat-column-tests {
+    width: 10%;
+}
+
+.mat-column-deaths {
+    width: 10%;
+}
+
+

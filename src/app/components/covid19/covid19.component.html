@@ -1,0 +1,118 @@
+<div class="navbar">
+  <div class="md-col-7 sm-col-4 log">
+    <h3 class="text-aling-center">Nico's Covid 19 World Tracker</h3>
+  </div>
+  <div class="md-col-5 sm-col-7 input-group">
+    <input
+      type="text"
+      name="searchBox"
+      placeholder="Search Country..."
+      class="form-control"
+      [(ngModel)]="searchCountry"
+    />
+    <button
+      (click)="onSubmit()"
+      [disabled]="!disableBtn"
+      class="btn btn-danger ml-3"
+    >
+      Search
+    </button>
+  </div>
+</div>
+
+<div class="example-container">
+  <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 table">
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef>
+        Country
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.country }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cases">
+      <th mat-header-cell *matHeaderCellDef>
+        Total Cases
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.cases }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="todayCases">
+      <th mat-header-cell *matHeaderCellDef>
+        Today's Cases
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.todayCases }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="deaths">
+      <th mat-header-cell *matHeaderCellDef>
+        Total Deaths
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.deaths }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="todayDeaths">
+      <th mat-header-cell *matHeaderCellDef>
+        Today's Deaths
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.todayDeaths }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="recovered">
+      <th mat-header-cell *matHeaderCellDef>
+        Recovered
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.recovered }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="todayRecovered">
+      <th mat-header-cell *matHeaderCellDef>
+        Today Recovered
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.todayRecovered }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef>
+        Total Active
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.active }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="critical">
+      <th mat-header-cell *matHeaderCellDef>
+        Critical
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.critical }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tests">
+      <th mat-header-cell *matHeaderCellDef>
+        Total Tests
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.tests }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnNames"></tr>
+  </mat-table>
+</div>

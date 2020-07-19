@@ -2,13 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { Covid19Component } from './components/covid19/covid19.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './components/search/search.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Covid19Component,
+    SearchComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    HttpClientModule,
+    MatSortModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
