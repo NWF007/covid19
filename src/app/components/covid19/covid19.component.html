@@ -1,5 +1,6 @@
+<div class="container md-col-5 sm-col-7">
 <div class="navbar">
-  <div class="md-col-7 sm-col-4 log">
+  <div class="md-col-7 sm-col-4 ">
     <h3 class="text-aling-center">Nico's Covid 19 World Tracker</h3>
   </div>
   <div class="md-col-5 sm-col-7 input-group">
@@ -20,8 +21,8 @@
   </div>
 </div>
 
-<div class="example-container">
-  <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 table">
+
+  <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 table md-col-5 sm-col-7">
     <ng-container matColumnDef="country">
       <th mat-header-cell *matHeaderCellDef>
         Country
@@ -115,4 +116,6 @@
     <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
     <tr mat-row *matRowDef="let row; columns: columnNames"></tr>
   </mat-table>
+
+  <mat-paginator [pageSizeOptions] = "[10, 20, 30]" showFirstLastButtons></mat-paginator>
 </div>
