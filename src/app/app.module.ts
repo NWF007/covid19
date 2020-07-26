@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { Covid19Component } from './components/covid19/covid19.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
-import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './components/search/search.component';
 

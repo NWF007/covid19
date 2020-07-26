@@ -48,6 +48,10 @@ h3 {
     background-color: silver;
 }
 
+    th.mat-sort-header-sorted{
+        color: red;
+    }
+
 .mat-column-country {
     width: 20%;
 }
